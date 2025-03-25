@@ -49,7 +49,7 @@ func save_article(w http.ResponseWriter, r *http.Request) {
 	full_text := r.FormValue("full_text")
 
 	if title == "" || anons == "" || full_text == "" {
-		fmt.Fprintf(w, "Не все данные заполнены")
+		fmt.Fprintf(w, "Не вся информация была заполнена")
 	} else {
 
 		db, err := sql.Open("mysql", "root:root@tcp(127.0.0.1:3306)/golang") // connection and error
